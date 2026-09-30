@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 330px;
+  margin: 0;
+  padding: 24px;
+  background: #101720;
+  color: #eff5ff;
+  font:
+    14px -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+header {
+  padding-bottom: 18px;
+}
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #7cddc6;
+}
+h1 {
+  font-size: 26px;
+  letter-spacing: -1px;
+  margin: 10px 0 8px;
+}
+p {
+  color: #9facbd;
+  line-height: 1.5;
+  font-size: 12px;
+  margin: 8px 0;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #283340;
+}
+input[type="checkbox"] {
+  accent-color: #7cddc6;
+  width: 17px;
+  height: 17px;
+}
+button {
+  width: 100%;
+  border: 0;
+  background: #7cddc6;
+  color: #0c2925;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  margin-top: 12px;
+}
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+.hint {
+  font-size: 11px;
+}
+details {
+  border-top: 1px solid #283340;
+  margin-top: 20px;
+  padding-top: 16px;
+}
+summary {
+  cursor: pointer;
+  color: #c9d6e6;
+}
+input[type="password"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background: #1c2836;
+  border: 1px solid #3e526b;
+  color: white;
+  border-radius: 6px;
+}
+#status {
+  color: #7cddc6;
+  margin-top: 20px;
+}
+footer {
+  border-top: 1px solid #283340;
+  padding-top: 12px;
+  font-size: 11px;
+  color: #8495ab;
+}

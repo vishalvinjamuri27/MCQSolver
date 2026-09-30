@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jev MCQ Overlay</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <span class="eyebrow">JEV / MCQ</span>
+      <h1>Just the answer.</h1>
+      <p>You do the clicking. We find the answer.</p>
+    </header>
+    <label class="row"
+      >Answer overlay <input id="enabled" type="checkbox"
+    /></label>
+    <label class="row"
+      >Show latency <input id="showLatency" type="checkbox"
+    /></label>
+    <label class="row"
+      >Debug console logs <input id="debug" type="checkbox"
+    /></label>
+    <button id="activate">Start on this page</button>
+    <p class="hint">
+      Open a page with an MCQ, then press Start. Answers update as questions
+      change.
+    </p>
+    <button id="stop">Stop on this page</button>
+    <p id="scanStatus" role="status">Press Start to scan the current page.</p>
+    <details open>
+      <summary>LLM answers · OpenAI + Jev</summary>
+      <p>
+        Questions on any subject that local arithmetic can't answer are sent
+        to OpenAI. Jev double-checks which answer choice matches.
+      </p>
+      <label
+        >OpenAI API key<input
+          id="llmKey"
+          type="password"
+          autocomplete="off"
+          placeholder="OpenAI API key" /></label
+      ><label
+        >Model<input id="llmModel" type="text" value="gpt-5.4-mini" /></label
+      ><label
+        >Reasoning effort<select id="reasoningEffort">
+          <option value="low">Low · faster</option>
+          <option value="medium">Medium · balanced</option>
+          <option value="high">High · more thinking</option>
+        </select></label
+      ><label class="row"
+        >Enable LLM answers <input id="llmEnabled" type="checkbox" /></label
+      ><button id="saveLLM">Save LLM settings</button>
+      <label class="row"
+        >Live screenshot mode <input id="vision" type="checkbox" /></label>
+      <p class="hint">
+        Press Start to watch this tab. When a new question appears and the page
+        settles, one screenshot is solved. Works on image and canvas questions.
+        Each question costs an image request.
+      </p>
+    </details>
+    <details>
+      <summary>Jev answer selection</summary>
+      <p>
+        Match computed results to written answer choices. Selected result and
+        choices are sent to TypeSafe only when local matching fails.
+      </p>
+      <label
+        >API key<input
+          id="jevKey"
+          type="password"
+          autocomplete="off"
+          placeholder="TypeSafe API key" /></label
+      ><label class="row"
+        >Enable Jev <input id="jevEnabled" type="checkbox" /></label
+      ><button id="saveJev">Save Jev settings</button>
+      <p class="hint">
+        Key is saved on this device until you disable this provider.
+      </p>
+    </details>
+    <p id="status" role="status">Local arithmetic · no API key required</p>
+    <footer id="shortcut">⌘ ⇧ J · toggle overlay</footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

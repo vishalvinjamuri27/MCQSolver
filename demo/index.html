@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jev Math Overlay · Local demo</title>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">JEV <span>/</span> MATH</div>
+      <span class="badge">READ-ONLY ASSISTANT</span>
+    </header>
+    <main>
+      <span class="eyebrow">THE ANSWER, AT A GLANCE</span>
+      <h1>Your math.<br />Your move.</h1>
+      <p class="intro">
+        A tiny overlay. An instant answer.<br />You stay in control of every
+        input.
+      </p>
+      <div class="tabs">
+        <button id="arithmetic" class="selected">Arithmetic</button
+        ><button id="mcq">Math MCQs</button>
+      </div>
+      <section id="game">
+        <span class="label">CURRENT PROBLEM</span>
+        <div class="start">
+          <span class="problem">13 × 8</span><span class="equals"> = </span
+          ><input aria-label="Your answer" placeholder="?" autocomplete="off" />
+        </div>
+      </section>
+      <section id="quiz" data-math-question hidden>
+        <span class="label">CURRENT QUESTION</span>
+        <h2 data-prompt>What is 6 × 4?</h2>
+        <div class="choices">
+          <label data-choice>A. 12</label><label data-choice>B. 24</label
+          ><label data-choice>C. 30</label><label data-choice>D. 36</label>
+        </div>
+      </section>
+      <div class="controls">
+        <button id="next" class="primary">Next question <span>→</span></button
+        ><button id="auto">Run rapid demo</button>
+      </div>
+      <p id="note">The answer field is yours. The overlay never fills it.</p>
+      <aside>
+        <span>01</span>
+        <p>Read the question</p>
+        <span>02</span>
+        <p>Solve it</p>
+        <span>03</span>
+        <p>Show only the answer</p>
+      </aside>
+      <p class="footnote">
+        Local arithmetic needs no API key. Advanced MCQs need the extension and
+        your LLM key. Without it, the overlay shows ?.
+      </p>
+    </main>
+    <div id="hit-target">Page element beneath overlay</div>
+    <script src="demo.js"></script>
+  </body>
+</html>
