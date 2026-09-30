@@ -31,7 +31,7 @@ A Chrome extension that watches the page you're studying on, figures out the cur
 Requires Node.js 20+ and Chrome.
 
 ```sh
-git clone <this repo> && cd jevquantsolver
+git clone https://github.com/vvinjam1/jev-mcq-overlay.git && cd jev-mcq-overlay
 npm install
 npm run build
 ```
